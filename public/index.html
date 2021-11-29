@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>ChatApp</title>
+</head>
+
+<body>
+    <h1 class="title">Sasta Whatsapp <i class="fa-brands fa-whatsapp"></i></h1>
+    <div class="main">
+        <div class="name">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text" id="name-input" class="name-input" value="anonymous" maxlength="20" />
+        </div>
+        <ul class="message-container" id="message-container">
+            <!-- !? Comming from another client -->
+            <li class="message-left">
+                <p class="message">
+
+                    <span></span>
+                </p>
+            </li>
+            <!-- !? Message from our End -->
+            <li class="message-right">
+                <p class="message">
+
+                    <span></span>
+                </p>
+            </li>
+            <li class="message-feedback">
+                <p class="feedback" id="feedback">
+
+                </p>
+            </li>
+        </ul>
+
+        <!-- !?Typing message box -->
+        <form class="message-form" id="message-form">
+            <input type="text" name="message" id="message-input" class="message-input">
+            <!-- !? Vertical dvider between input field and Send button -->
+            <button type="submit" class="send-button">Send <span><i class="fa fa-paper-plane"></i></span></button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="clients-total">Total Clients : 2</h3>
+    <script src="/socket.io/socket.io.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
